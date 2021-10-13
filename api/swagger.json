@@ -1,0 +1,487 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a documentation for my Anime API",
+    "version": "1.0.0",
+    "title": "Anime API",
+    "termsOfService": "",
+    "contact": {
+      "email": ""
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "animes",
+      "description": "Everything about the animes"
+    },
+    {
+      "name": "categories",
+      "description": "Access to main categories & tags"
+    },
+    {
+      "name": "user",
+      "description": "Operations about user"
+    }
+  ],
+  "schemes": ["http"],
+  "paths": {
+    "/animes?limit={int}": {
+      "get": {
+        "tags": ["animes"],
+        "summary": "Get the whole list of animes",
+        "description": "About 20K of animes",
+        "operationId": "allanimes",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Number of animes you want to display. Let it empty if you want to display all animes.",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Anime"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/anime/{id}": {
+      "get": {
+        "tags": ["animes"],
+        "summary": "Finds Anime by ID",
+        "description": "",
+        "operationId": "findAnimeById",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Anime"
+              }
+            }
+          },
+          "400": {
+            "description": "ID doesn't exist."
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "tags": ["animes"],
+        "summary": "Finds Anime by query",
+        "description": "Allows search of anime by title, min year, max year, min episodes, max episodes, type, status.",
+        "operationId": "searchAnimes",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "description": "title contains query",
+            "type": "string"
+          },
+          {
+            "name": "minepisodes",
+            "in": "query",
+            "description": "minimum of episodes wanted",
+            "type": "integer"
+          },
+          {
+            "name": "maxepisodes",
+            "in": "query",
+            "description": "maximum of episodes wanted",
+            "type": "integer"
+          },
+          {
+            "name": "minyear",
+            "in": "query",
+            "description": "minimum year of anime broadcast",
+            "type": "integer"
+          },
+          {
+            "name": "maxepisodes",
+            "in": "query",
+            "description": "maximum of episodes wanted",
+            "type": "integer"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "TV, OVA, ONA, Special, Movie",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "upcoming, currently, finished, unknown",
+            "type": "string"
+          },
+          {
+            "name": "season",
+            "in": "query",
+            "description": "winter, spring, summer, fall, undefined",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Anime"
+              }
+            }
+          },
+          "400": {
+            "description": "No match."
+          }
+        }
+      }
+    },
+    "/category": {
+      "get": {
+        "tags": ["categories"],
+        "summary": "Get main categories with 30 random animes of theirselves",
+        "description": "",
+        "operationId": "getMainCategories",
+        "produces": ["application/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "animes": {
+                    "$ref": "#/definitions/Relation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/category/{id}": {
+      "get": {
+        "tags": ["categories"],
+        "summary": "Get all animes of one specific category or tag",
+        "description": "",
+        "operationId": "getOneCategory",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "animes": {
+                    "$ref": "#/definitions/Relation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tags": {
+      "get": {
+        "tags": ["categories"],
+        "summary": "Get all available tags",
+        "description": "",
+        "operationId": "getAllTags",
+        "produces": ["application/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Relation"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/signup": {
+      "post": {
+        "tags": ["user"],
+        "summary": "Create a new user",
+        "description": "",
+        "operationId": "createUser",
+        "consumes": ["application/x-www-form-urlencoded", "application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "username",
+            "description": "User nickname",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "password",
+            "description": "User password",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "passwordConfirm",
+            "description": "User password confirmation",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "email",
+            "description": "User email",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "avatar_url",
+            "description": "URL to the user avatar",
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "gender",
+            "description": "0 for -sama, 1 for -kun and 2 for -chan",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User Created",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NewUser"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/signin": {
+      "post": {
+        "tags": ["user"],
+        "summary": "Login as a user",
+        "description": "",
+        "operationId": "loginUser",
+        "consumes": ["application/x-www-form-urlencoded", "application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "email",
+            "description": "User email used for login",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "password",
+            "description": "User email used for login",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User Logged",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NewUser"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Anime": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "mal_id": {
+          "type": "integer",
+          "description": "MyAnimeList anime ID"
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["TV", "Movie", "OVA", "ONA", "Special"]
+        },
+        "status": {
+          "type": "string",
+          "description": "Anime broadcast Status",
+          "enum": ["FINISHED", "CURRENTLY", "UPCOMING", "UNKNOWN"]
+        },
+        "season": {
+          "type": "string",
+          "enum": ["WINTER", "SPRING", "SUMMER", "FALL", "UNDEFINED"]
+        },
+        "picture": {
+          "type": "string",
+          "description": "URL of anime picture"
+        },
+        "thumbnail": {
+          "type": "string",
+          "description": "URL of anime picture thumbnail"
+        },
+        "tags": {
+          "$ref": "#/definitions/Category"
+        },
+        "relations": {
+          "$ref": "#/definitions/Relation"
+        },
+        "previous_seasons": {
+          "$ref": "#/definitions/Relation"
+        },
+        "next_seasons": {
+          "$ref": "#/definitions/Relation"
+        }
+      },
+      "xml": {
+        "name": "Anime"
+      }
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "label": {
+          "type": "string"
+        },
+        "main": {
+          "type": "boolean"
+        }
+      },
+      "xml": {
+        "name": "Category"
+      }
+    },
+    "Relation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "picture": {
+          "type": "string",
+          "description": "URL of anime picture"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["TV", "ONA", "OVA", "Special", "Movie"]
+        }
+      },
+      "xml": {
+        "name": "Relation"
+      }
+    },
+    "NewUser": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "avatar_url": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "integer",
+          "enum": [0, 1, 2]
+        }
+      },
+      "xml": {
+        "name": "NewUser"
+      }
+    },
+    "LoginUser": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string@string.str"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "LoginUser"
+      }
+    }
+  }
+}

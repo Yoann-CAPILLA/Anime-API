@@ -1,0 +1,89 @@
+### API DOC
+GET http://localhost:3000/v1/
+
+### All animes
+GET http://localhost:3000/v1/animes
+
+### All animes with limit
+GET http://localhost:3000/v1/animes?limit=10
+
+### Get one anime with details
+GET http://localhost:3000/v1/anime/54
+
+### GET Main Tags including animes
+GET http://localhost:3000/v1/category
+
+### GET a tag
+GET http://localhost:3000/v1/category/20
+
+### GET all tags
+GET http://localhost:3000/v1/tags
+
+### All animes which matches with the search options
+GET http://localhost:3000/v1/search?minepisodes=8&minyear=2015&type=tv&status=finished
+
+### POST a new user
+POST http://localhost:3000/v1/signup
+Content-Type: application/json
+
+{
+    "username": "John",
+    "password": "12345678",
+    "passwordConfirm": "12345678",
+    "email": "johndoe@gmail.com",
+    "gender": 0
+}
+
+### Get a user and its token
+POST http://localhost:3000/v1/signin
+Content-Type: application/json
+
+{
+    "email": "johndoe@gmail.com",
+    "password": "12345678"
+}
+
+### PATCH a user
+PATCH http://localhost:3000/v1/user
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM0MDQwMTc2LCJleHAiOjE2MzQxMjY1NzZ9.biPvWGDiLv3XzLn96_wrdDCGSEwcm4GCXrQmYoWVTKY
+
+{
+    "username": "John",
+    "previous_password": "12345678",
+    "password": "87654321",
+    "passwordConfirm": "87654321",
+    "email": "johndoe@gmail.com",
+    "avatar_url": "https://st3.depositphotos.com/32100976/34458/i/600/depositphotos_344586332-stock-photo-anime-wallpapers-hd-black-and.jpg",
+    "gender": 1
+}
+
+### GET a user bookmarks
+GET http://localhost:3000/v1/bookmark
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM0MDQwMTc2LCJleHAiOjE2MzQxMjY1NzZ9.biPvWGDiLv3XzLn96_wrdDCGSEwcm4GCXrQmYoWVTKY
+
+### Add or modify a user's bookmarks
+PUT http://localhost:3000/v1/bookmark
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM0MDQwMTc2LCJleHAiOjE2MzQxMjY1NzZ9.biPvWGDiLv3XzLn96_wrdDCGSEwcm4GCXrQmYoWVTKY
+
+{
+    "anime_id": 4111,
+    "progression": 1,
+    "bc_id": 1
+}
+
+### Delete a user's bookmark
+DELETE http://localhost:3000/v1/bookmark
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM0MDQwMTc2LCJleHAiOjE2MzQxMjY1NzZ9.biPvWGDiLv3XzLn96_wrdDCGSEwcm4GCXrQmYoWVTKY
+
+{
+    "anime_id": 4111
+}
+
+### DELETE a user
+DELETE http://localhost:3000/v1/user
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM0MDQwMTc2LCJleHAiOjE2MzQxMjY1NzZ9.biPvWGDiLv3XzLn96_wrdDCGSEwcm4GCXrQmYoWVTKY

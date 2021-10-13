@@ -1,0 +1,7 @@
+%syntax-version=1.0.0
+%project=anime
+
+init 2021-10-12T08:38:56Z Yoann-CAPILLA <yoann.capilla@gmail.com> # init
+domain 2021-10-12T08:39:20Z Yoann-CAPILLA <yoann.capilla@gmail.com> # domains creation for datatype
+view 2021-10-12T08:42:24Z Yoann-CAPILLA <yoann.capilla@gmail.com> # views creation for data formatting
+function 2021-10-12T08:44:03Z Yoann-CAPILLA <yoann.capilla@gmail.com> # functions for users management

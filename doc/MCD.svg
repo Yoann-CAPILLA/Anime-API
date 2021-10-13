@@ -1,0 +1,142 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="360" height="381" view_box="0 0 360 381"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Tue, 04 May 2021 02:48:03</desc>
+
+<rect id="frame" x="0" y="0" width="360" height="381" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association LIER -->
+<path d="M64 186 C 21.3333333333 84.0 21.3333333333 33.3333333333 64 34" fill="none" stroke="#de77ae" stroke-width="2"/>
+<text x="38.0" y="76" fill="#4d9221" font-family="Verdana" font-size="12">0,N</text>
+<path d="M64 186 C 106.666666667 84.0 106.666666667 33.3333333333 64 34" fill="none" stroke="#de77ae" stroke-width="2"/>
+<text x="68.0" y="76" fill="#4d9221" font-family="Verdana" font-size="12" onmouseover="show(evt,'relation')" onmouseout="hide(evt)" style="cursor: pointer;">1,N</text>
+<g id="association-LIER">
+	<path d="M 72 9 a 14 14 90 0 1 14 14 V 34 h -44 V 23 a 14 14 90 0 1 14 -14" fill="#f1b6da" stroke="#f1b6da" stroke-width="0"/>
+	<path d="M 86 34.0 v 11 a 14 14 90 0 1 -14 14 H 56 a 14 14 90 0 1 -14 -14 V 34.0 H 44" fill="#fde0ef" stroke="#fde0ef" stroke-width="0"/>
+	<rect x="42" y="9" width="44" height="50" fill="none" rx="14" stroke="#de77ae" stroke-width="2"/>
+	<line x1="42" y1="34" x2="86" y2="34" stroke="#de77ae" stroke-width="1"/>
+	<text x="49" y="26.7" fill="#000000" font-family="Verdana" font-size="12">LIER</text>
+</g>
+
+<!-- Association MARQUER -->
+<line x1="64" y1="186" x2="182" y2="186" stroke="#de77ae" stroke-width="2"/>
+<text x="104" y="203.0" fill="#4d9221" font-family="Verdana" font-size="12">0,N</text>
+<line x1="182" y1="34" x2="182" y2="186" stroke="#de77ae" stroke-width="2"/>
+<text x="187.0" y="76" fill="#4d9221" font-family="Verdana" font-size="12">0,N</text>
+<line x1="304" y1="186" x2="182" y2="186" stroke="#de77ae" stroke-width="2"/>
+<text x="230" y="203.0" fill="#4d9221" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-MARQUER">
+	<path d="M 211 152 a 14 14 90 0 1 14 14 V 177 h -86 V 166 a 14 14 90 0 1 14 -14" fill="#f1b6da" stroke="#f1b6da" stroke-width="0"/>
+	<path d="M 225 177.0 v 29 a 14 14 90 0 1 -14 14 H 153 a 14 14 90 0 1 -14 -14 V 177.0 H 86" fill="#fde0ef" stroke="#fde0ef" stroke-width="0"/>
+	<rect x="139" y="152" width="86" height="68" fill="none" rx="14" stroke="#de77ae" stroke-width="2"/>
+	<line x1="139" y1="177" x2="225" y2="177" stroke="#de77ae" stroke-width="1"/>
+	<text x="151" y="169.7" fill="#000000" font-family="Verdana" font-size="12">MARQUER</text>
+	<text x="146" y="194.8" fill="#000000" font-family="Verdana" font-size="12">progression</text>
+	<text x="146" y="211.8" fill="#000000" font-family="Verdana" font-size="12">dateMaj</text>
+</g>
+
+<!-- Association CARACTERISER -->
+<line x1="64" y1="186" x2="64" y2="338" stroke="#de77ae" stroke-width="2"/>
+<text x="69.0" y="305" fill="#4d9221" font-family="Verdana" font-size="12">1,N</text>
+<line x1="182" y1="338" x2="64" y2="338" stroke="#de77ae" stroke-width="2"/>
+<text x="124" y="355.0" fill="#4d9221" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-CARACTERISER">
+	<path d="M 105 313 a 14 14 90 0 1 14 14 V 338 h -110 V 327 a 14 14 90 0 1 14 -14" fill="#f1b6da" stroke="#f1b6da" stroke-width="0"/>
+	<path d="M 119 338.0 v 11 a 14 14 90 0 1 -14 14 H 23 a 14 14 90 0 1 -14 -14 V 338.0 H 110" fill="#fde0ef" stroke="#fde0ef" stroke-width="0"/>
+	<rect x="9" y="313" width="110" height="50" fill="none" rx="14" stroke="#de77ae" stroke-width="2"/>
+	<line x1="9" y1="338" x2="119" y2="338" stroke="#de77ae" stroke-width="1"/>
+	<text x="16" y="330.7" fill="#000000" font-family="Verdana" font-size="12">CARACTERISER</text>
+</g>
+
+<!-- Entity DIFFUSEUR -->
+<g id="entity-DIFFUSEUR">
+	<g id="frame-DIFFUSEUR">
+		<rect x="141" y="9" width="82" height="25" fill="#b8e186" stroke="#b8e186" stroke-width="0"/>
+		<rect x="141" y="34.0" width="82" height="25" fill="#e6f5d0" stroke="#e6f5d0" stroke-width="0"/>
+		<rect x="141" y="9" width="82" height="50" fill="none" stroke="#7fbc41" stroke-width="2"/>
+		<line x1="141" y1="34" x2="223" y2="34" stroke="#7fbc41" stroke-width="1"/>
+	</g>
+	<text x="146" y="26.7" fill="#000000" font-family="Verdana" font-size="12">DIFFUSEUR</text>
+	<text x="146" y="51.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<line x1="146" y1="54" x2="174" y2="54" stroke="#000000" stroke-width="1"/>
+</g>
+
+<!-- Entity ANIME -->
+<g id="entity-ANIME">
+	<g id="frame-ANIME">
+		<rect x="29" y="84" width="70" height="25" fill="#b8e186" stroke="#b8e186" stroke-width="0"/>
+		<rect x="29" y="109.0" width="70" height="179" fill="#e6f5d0" stroke="#e6f5d0" stroke-width="0"/>
+		<rect x="29" y="84" width="70" height="204" fill="none" stroke="#7fbc41" stroke-width="2"/>
+		<line x1="29" y1="109" x2="99" y2="109" stroke="#7fbc41" stroke-width="1"/>
+	</g>
+	<text x="43" y="101.7" fill="#000000" font-family="Verdana" font-size="12">ANIME</text>
+	<text x="34" y="126.7" fill="#000000" font-family="Verdana" font-size="12">titre</text>
+	<line x1="34" y1="129" x2="60" y2="129" stroke="#000000" stroke-width="1"/>
+	<text x="34" y="143.7" fill="#000000" font-family="Verdana" font-size="12">type</text>
+	<text x="34" y="160.7" fill="#000000" font-family="Verdana" font-size="12">statut</text>
+	<text x="34" y="177.7" fill="#000000" font-family="Verdana" font-size="12">episodes</text>
+	<text x="34" y="194.8" fill="#000000" font-family="Verdana" font-size="12">année</text>
+	<text x="34" y="211.8" fill="#000000" font-family="Verdana" font-size="12">saison</text>
+	<text x="34" y="228.8" fill="#000000" font-family="Verdana" font-size="12">couleur</text>
+	<text x="34" y="245.8" fill="#000000" font-family="Verdana" font-size="12">image</text>
+	<text x="34" y="262.8" fill="#000000" font-family="Verdana" font-size="12">miniature</text>
+	<text x="34" y="279.8" fill="#000000" font-family="Verdana" font-size="12">malId</text>
+</g>
+
+<!-- Entity UTILISATEUR -->
+<g id="entity-UTILISATEUR">
+	<g id="frame-UTILISATEUR">
+		<rect x="257" y="127" width="94" height="25" fill="#b8e186" stroke="#b8e186" stroke-width="0"/>
+		<rect x="257" y="152.0" width="94" height="93" fill="#e6f5d0" stroke="#e6f5d0" stroke-width="0"/>
+		<rect x="257" y="127" width="94" height="118" fill="none" stroke="#7fbc41" stroke-width="2"/>
+		<line x1="257" y1="152" x2="351" y2="152" stroke="#7fbc41" stroke-width="1"/>
+	</g>
+	<text x="262" y="144.7" fill="#000000" font-family="Verdana" font-size="12">UTILISATEUR</text>
+	<text x="262" y="169.7" fill="#000000" font-family="Verdana" font-size="12">email</text>
+	<line x1="262" y1="172" x2="296" y2="172" stroke="#000000" stroke-width="1"/>
+	<text x="262" y="186.8" fill="#000000" font-family="Verdana" font-size="12">pseudo</text>
+	<text x="262" y="203.8" fill="#000000" font-family="Verdana" font-size="12">motDePasse</text>
+	<text x="262" y="220.8" fill="#000000" font-family="Verdana" font-size="12">avatarUrl</text>
+	<text x="262" y="237.8" fill="#000000" font-family="Verdana" font-size="12">genre</text>
+</g>
+
+<!-- Entity LABEL -->
+<g id="entity-LABEL">
+	<g id="frame-LABEL">
+		<rect x="151" y="304" width="62" height="25" fill="#b8e186" stroke="#b8e186" stroke-width="0"/>
+		<rect x="151" y="329.0" width="62" height="43" fill="#e6f5d0" stroke="#e6f5d0" stroke-width="0"/>
+		<rect x="151" y="304" width="62" height="68" fill="none" stroke="#7fbc41" stroke-width="2"/>
+		<line x1="151" y1="329" x2="213" y2="329" stroke="#7fbc41" stroke-width="1"/>
+	</g>
+	<text x="163" y="321.7" fill="#000000" font-family="Verdana" font-size="12">LABEL</text>
+	<text x="156" y="346.8" fill="#000000" font-family="Verdana" font-size="12">label</text>
+	<line x1="156" y1="349" x2="185" y2="349" stroke="#000000" stroke-width="1"/>
+	<text x="156" y="363.8" fill="#000000" font-family="Verdana" font-size="12">principal</text>
+</g>
+
+<!-- Annotations -->
+<script type="text/ecmascript">
+<![CDATA[
+	function show(evt, text) {
+		var pos = (evt.target.getAttribute("y") < 336) ? "bottom" : "top"
+		var annotation = document.getElementById(pos + "_annotation_KmNU44JQ")
+		annotation.textContent = text
+		annotation.setAttributeNS(null, "visibility", "visible");
+		document.getElementById(pos + "_overlay_KmNU44JQ").setAttributeNS(null, "visibility", "visible");
+	}
+	function hide(evt) {
+		document.getElementById("top_annotation_KmNU44JQ").setAttributeNS(null, "visibility", "hidden");
+		document.getElementById("top_overlay_KmNU44JQ").setAttributeNS(null, "visibility", "hidden");
+		document.getElementById("bottom_annotation_KmNU44JQ").setAttributeNS(null, "visibility", "hidden");
+		document.getElementById("bottom_overlay_KmNU44JQ").setAttributeNS(null, "visibility", "hidden");
+	}
+]]>
+</script>
+<rect id="top_overlay_KmNU44JQ" x="0" y="0" width="360" height="40" fill="#c51b7d" stroke-width="0" opacity="0.9" visibility="hidden"/>
+<text id="top_annotation_KmNU44JQ" text-anchor="middle" x="180.0" y="24" fill="#f7f7f7" font-family="Verdana" font-size="14" visibility="hidden"></text>
+<rect id="bottom_overlay_KmNU44JQ" x="0" y="341" width="360" height="40" fill="#c51b7d" stroke-width="0" opacity="0.9" visibility="hidden"/>
+<text id="bottom_annotation_KmNU44JQ" text-anchor="middle" x="180.0" y="365" fill="#f7f7f7" font-family="Verdana" font-size="14" visibility="hidden"></text>
+</svg>
